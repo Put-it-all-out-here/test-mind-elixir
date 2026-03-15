@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind Elixir JSON Test</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mind-elixir/dist/style.css">
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 16px;
+    }
+
+    #map {
+      height: 500px;
+      width: 100%;
+      border: 1px solid #ccc;
+      margin-bottom: 16px;
+    }
+
+    .controls {
+      margin-bottom: 12px;
+    }
+
+    button {
+      margin-right: 8px;
+      margin-bottom: 8px;
+      padding: 8px 12px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 220px;
+      font-family: monospace;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mind Elixir JSON 実験</h1>
+
+  <div id="map"></div>
+
+  <div class="controls">
+    <button id="exportBtn">Export JSON</button>
+    <button id="loadBtn">Load JSON</button>
+    <button id="clearBtn">Clear Text</button>
+  </div>
+
+  <textarea id="jsonArea" placeholder="ここにJSONが表示されます"></textarea>
+
+  <script type="module" src="index.js"></script>
+</body>
+</html>
