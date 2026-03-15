@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mind Elixir JSON Test</title>
+  <title>Mind Elixir Test</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mind-elixir/dist/style.css">
 
   <style>
     body {
       font-family: sans-serif;
-      margin: 16px;
+      margin: 0;
+      padding: 16px;
     }
 
     #map {
@@ -20,36 +21,34 @@
       margin-bottom: 16px;
     }
 
-    .controls {
+    .button-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
       margin-bottom: 12px;
     }
 
-    button {
-      margin-right: 8px;
-      margin-bottom: 8px;
-      padding: 8px 12px;
-    }
-
-    textarea {
+    #jsonArea {
       width: 100%;
       height: 220px;
-      font-family: monospace;
-      font-size: 14px;
+      box-sizing: border-box;
     }
   </style>
 </head>
 <body>
-  <h1>Mind Elixir JSON 実験</h1>
-
   <div id="map"></div>
 
-  <div class="controls">
-    <button id="exportBtn">Export JSON</button>
-    <button id="loadBtn">Load JSON</button>
-    <button id="clearBtn">Clear Text</button>
+  <div class="button-row">
+    <button id="exportBtn">JSON表示</button>
+    <button id="loadBtn">JSON読込</button>
+    <button id="downloadBtn">JSONダウンロード</button>
+    <button id="uploadBtn">JSONアップロード</button>
+    <button id="clearBtn">テキストクリア</button>
   </div>
 
-  <textarea id="jsonArea" placeholder="ここにJSONが表示されます"></textarea>
+  <input id="fileInput" type="file" accept=".json,application/json" style="display:none;">
+
+  <textarea id="jsonArea" placeholder="ここにJSONを表示 / 貼り付け"></textarea>
 
   <script type="module" src="index.js"></script>
 </body>
